@@ -1,4 +1,3 @@
-```actionscript
 	        var plus:GooglePlusService=new GooglePlusService();
 			plus.apiKey=API_KEY;
 			var id:String="YOUR_ID"
@@ -12,4 +11,3 @@
 			
 			new EndpointRequest("/people/"+id+"/activities/public",plus).execute();
 
-```
