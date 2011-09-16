@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.google.plus.GooglePlusService"/>
+    <classEntry path="com.google.plus.endpoint.PeopleEndpoint"/>
+    <classEntry path="com.google.plus.models.Person"/>
+    <classEntry path="com.google.plus.models.Name"/>
+    <classEntry path="com.google.plus.JsonMapper"/>
+    <classEntry path="avmplus.DescribeType"/>
+    <classEntry path="com.google.plus.models.Image"/>
+    <classEntry path="com.google.plus.models.Email"/>
+    <classEntry path="com.google.plus.models.URL"/>
+    <classEntry path="com.google.plus.models.Organization"/>
+    <classEntry path="com.google.plus.models.Places"/>
+    <classEntry path="com.google.plus.endpoint.Endpoint"/>
+    <classEntry path="com.google.plus.endpoint.EndpointRequest"/>
+    <classEntry path="com.google.plus.endpoint.EndpointResponder"/>
+    <classEntry path="com.google.plus.endpoint.ActivitesEndpoint"/>
+    <classEntry path="com.google.plus.models.ActivityFeed"/>
+    <classEntry path="com.google.plus.models.Activity"/>
+    <classEntry path="com.google.plus.models.Actor"/>
+    <classEntry path="com.google.plus.models.PlusObject"/>
+    <classEntry path="com.google.plus.models.Counter"/>
+    <classEntry path="com.google.plus.models.Attachment"/>
+    <classEntry path="com.google.plus.models.URLContent"/>
+    <classEntry path="com.google.plus.models.Acl"/>
+    <classEntry path="com.google.plus.models.AbstractContent"/>
+    <classEntry path="com.google.plus.models.Provider"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
