@@ -1,0 +1,13 @@
+	        var plus:GooglePlusService=new GooglePlusService();
+			plus.apiKey=API_KEY;
+			var id:String="YOUR_ID"
+			var request:EndpointRequest=new ActivitesEndpoint(plus).list(id,"public");
+				
+			request.addResponder(new EndpointResponder(function(value:Object):void
+			{
+				trace("ActivityFeed ", value);
+			}));
+			request.execute();
+			
+			new EndpointRequest("/people/"+id+"/activities/public",plus).execute();
+
