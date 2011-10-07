@@ -19,13 +19,16 @@
     <classEntry path="com.google.plus.models.ActivityFeed"/>
     <classEntry path="com.google.plus.models.Activity"/>
     <classEntry path="com.google.plus.models.Actor"/>
-    <classEntry path="com.google.plus.models.PlusObject"/>
+    <classEntry path="com.google.plus.models.ActivityPlusObject"/>
     <classEntry path="com.google.plus.models.Counter"/>
     <classEntry path="com.google.plus.models.Attachment"/>
     <classEntry path="com.google.plus.models.URLContent"/>
     <classEntry path="com.google.plus.models.Acl"/>
     <classEntry path="com.google.plus.models.AbstractContent"/>
     <classEntry path="com.google.plus.models.Provider"/>
+    <classEntry path="com.google.plus.models.PeopleFeed"/>
+    <classEntry path="com.google.plus.models.CommentFeed"/>
+    <classEntry path="com.google.plus.models.Comment"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

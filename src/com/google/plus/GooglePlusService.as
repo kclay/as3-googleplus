@@ -20,9 +20,12 @@ package com.google.plus
 	import com.google.plus.models.Acl;
 	import com.google.plus.models.Activity;
 	import com.google.plus.models.ActivityFeed;
+	import com.google.plus.models.Comment;
+	import com.google.plus.models.CommentFeed;
 	import com.google.plus.models.Email;
 	import com.google.plus.models.Image;
 	import com.google.plus.models.Organization;
+	import com.google.plus.models.PeopleFeed;
 	import com.google.plus.models.Person;
 	import com.google.plus.models.Places;
 	import com.google.plus.models.URL;
@@ -40,6 +43,9 @@ package com.google.plus
 			jsonMapper.addMapping("plus#acl", Acl);
 			jsonMapper.addMapping("plus#activityFeed", ActivityFeed);
 			jsonMapper.addMapping("plus#activity", Activity);
+			jsonMapper.addMapping("plus#peopleFeed", PeopleFeed);
+			jsonMapper.addMapping("plus#commentFeed", CommentFeed);
+			jsonMapper.addMapping("plus#comment", Comment);
 		/*jsonMapper.addMapping("person.urls",URL);
 			jsonMapper.addMapping("person.image",Image);
 			jsonMapper.addMapping("person.emails", Email);

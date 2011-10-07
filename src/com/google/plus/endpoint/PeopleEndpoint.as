@@ -16,9 +16,9 @@
 */
 package com.google.plus.endpoint
 {
-	
+
 	import com.google.plus.GooglePlusService;
-	
+
 
 	public class PeopleEndpoint extends Endpoint
 	{
@@ -31,6 +31,20 @@ package com.google.plus.endpoint
 		{
 			return invoke("/people/" + id);
 
+		}
+
+		public function search(query:String, maxResults:int=10, pageToken:String=null):EndpointRequest
+		{
+
+			var params:Object={query: query, maxResults: maxResults}
+			if (pageToken)
+				params.pageToken=pageToken;
+			return invoke("/people", params);
+		}
+
+		public function listByActivity(activityId:String, collection:String, params:Object=null):EndpointRequest
+		{
+			return invoke("/activities/" + activityId + "/people/" + collection, params);
 		}
 
 	}

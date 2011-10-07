@@ -28,7 +28,7 @@ package com.google.plus.models
 		
 		public var verb:String
 		
-		public var object:PlusObject
+		public var object:ActivityPlusObject
 		public var provider:Provider
 		public var access:Acl
 		

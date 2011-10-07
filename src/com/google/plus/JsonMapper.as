@@ -103,7 +103,7 @@ package com.google.plus
 			{
 				if (prop == "kind")
 					continue;
-				if (rtn.hasOwnProperty(prop))
+				if (!rtn.hasOwnProperty(prop))
 					continue;
 
 				if (mapping)
@@ -200,7 +200,7 @@ internal class Mapping
 		var variable:XML
 		for each (variable in d)
 		{
-			descriptor[variable.@name]=variable.@type;
+			descriptor[String(variable.@name)]=String(variable.@type);
 
 		}
 		

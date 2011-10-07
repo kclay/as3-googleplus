@@ -16,14 +16,22 @@
 */
 package com.google.plus.models
 {
-	public class PlusObject
+	public class ActivityPlusObject extends PlusObject
 	{
-		public var objectType:String
-		public var id:String
 		
-		public var content:String
+		public var actor:Actor
 		
-		public function PlusObject()
+		public var originalContent:String
+		public var url:String
+		public var replies:Counter
+		public var plusoners:Counter
+		public var resharers:Counter
+		public var attachments:Vector.<Attachment>
+		
+		public var annotation:String
+		public var crosspostSource:String
+		public var access:Acl
+		public function ActivityPlusObject()
 		{
 		}
 	}

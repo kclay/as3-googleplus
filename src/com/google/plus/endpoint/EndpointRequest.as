@@ -20,7 +20,7 @@ package com.google.plus.endpoint
 	import com.google.plus.GooglePlusService;
 	import com.google.plus.JsonMapper;
 	import com.google.plus.endpoint.EndpointResponder;
-
+	
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.events.SecurityErrorEvent;
@@ -113,11 +113,12 @@ package com.google.plus.endpoint
 
 		}
 
-		public function addResponder(responder:EndpointResponder):void
+		public function addResponder(responder:EndpointResponder):EndpointRequest
 		{
 			if (!_responders)
 				_responders=new Vector.<EndpointResponder>();
 			_responders.push(responder);
+			return this;
 		}
 	}
 }

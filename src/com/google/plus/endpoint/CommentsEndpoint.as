@@ -18,33 +18,31 @@ package com.google.plus.endpoint
 {
 	import com.google.plus.GooglePlusService;
 
-	public class ActivitesEndpoint extends Endpoint
+	public class CommentsEndpoint extends Endpoint
 	{
 		public static const ORDER_BY_RECENT:String="recent";
 		public static const ORDER_BY_BEST:String="best";
-		public static const COLLECTION_PUBLIC:String="public"
 
-		public function ActivitesEndpoint(service:GooglePlusService)
+		public function CommentsEndpoint(service:GooglePlusService)
 		{
 			super(service);
 		}
 
-		public function list(id:String, collection:String="public", query:Object=null):EndpointRequest
-		{
-			return invoke("/people/" + id + "/activities/" + collection, query);
-		}
+		public function list(activityId:String, maxResults:int=20, params:Object=null, nextPageToken:String=null):EndpointRequest
 
-		public function get(activityId:String, query:Object=null):EndpointRequest
 		{
-			return invoke("/activities/" + activityId, query);
-		}
-
-		public function search(query:String, orderBy:String="recent", maxResults:int=10, nextPageToken:String=null):EndpointRequest
-		{
-			var params:Object={query: query, orderBy: orderBy, maxResults: maxResults};
+			params||={};
+			params.maxResults=maxResults;
 			if (nextPageToken)
 				params.nextPageToken=nextPageToken;
-			return invoke("/activities",params);
+			return invoke("/activities/" + activityId + "/comments", params);
 		}
+
+		public function get(commentId:String, params:Object=null):EndpointRequest
+		{
+			return invoke("/comments/" + commentId, params);
+		}
+
+
 	}
 }
