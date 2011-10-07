@@ -53,7 +53,7 @@ package com.google.plus.endpoint
 			_query=value || {};
 		}
 
-		public function execute():void
+		public function execute():EndpointRequest
 		{
 			var loader:URLLoader=new URLLoader();
 			var request:URLRequest=new URLRequest(url);
@@ -74,6 +74,7 @@ package com.google.plus.endpoint
 			loader.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
 			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, errorHandler);
 			loader.load(request);
+			return this;
 
 		}
 
@@ -109,9 +110,11 @@ package com.google.plus.endpoint
 
 				responder.result(value);
 			}
+		
 
 
 		}
+		
 
 		public function addResponder(responder:EndpointResponder):EndpointRequest
 		{
